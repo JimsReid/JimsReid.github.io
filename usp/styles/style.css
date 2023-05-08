@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.logo{
+    width: 20%;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E9EAEC;
+    padding: 5px 5px;
+    border-bottom: 1px solid transparent;
+    z-index: 1000;
+}
+
+.navlist{
+    display: flex;
+    margin-bottom: 0;
+    margin-right: 40px;
+}
+
+.navlist li{
+    margin-left: 20px;
+}
+
+.navlist a{
+    color: #FAD02C;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0; 
+}
+
+.login{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.form-div{
+    width: 300px;
+    align-items: center;
+    text-align: center;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-control-lg{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid gray;
+}
+
+.form-div h2{
+    font-weight: bold;
+    text-align: left;
+    color: #333652;
+}
+
+.form-div p{
+    line-height: .25;
+}
+
+.form-div a{
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #333652;
+}
+
+.btn{
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #333652;
+}
+
+footer{
+    background: #E9EAEC;
+    text-align: center;
+    padding: 15px;
+    z-index: 1000;
+}
+
+footer p{
+    margin: 0;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+/*HOME PAGE*/
+
+.home{
+    background-image: url(../images/home_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+
+.home-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.home-text h1{
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    font-size: 80px;
+    color: #E9EAEC;
+    padding-bottom: 150px;
+    padding-left: 40px;
+}
