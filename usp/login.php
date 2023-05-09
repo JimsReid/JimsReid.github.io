@@ -1,10 +1,14 @@
+<?php
+    //include_once'./php/dbc.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USP | Home</title>
+    <title>USP | Login</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;600;700&display=swap" rel="stylesheet">
@@ -16,10 +20,9 @@
 
 <body>
     <header>
-        <a href="#"><img class="logo" src="./images/uap-logo.png"></a>
+        <a href="./index.php"><img class="logo" src="./images/uap-logo.png"></a>
         <ul class="navlist">
-            <li><a href="#">Directory</a></li>
-            <li><a href="#" class="active">Home</a></li>
+            <li><a href="./index.php">Home</a></li>
         </ul>
 
         <div class="bx bx-menu" id="menu-icon">
@@ -27,21 +30,34 @@
         </div>
     </header>
 
-    <section class="home">
-        <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                <div class="col-10 col-sm-8 col-lg-3">
+    <section class="login" id="login">
+        <div class="col-lg-12 form-div">
+            <h2>Hi, Dragon!</h2>
+            <form action="./php/login_f.php" method="post">
+                <?php
+                    if(isset($_GET['error'])){
+                        ?> <p class="error"> <?php echo $_GET['error'];
+                    }
+                ?>
+                <div class="form-group">
+                    <input class="form-control-lg" type="text" placeholder="Username">
+                    <input class="form-control-lg" type="password" placeholder="Password">
                 </div>
-                <div class="col-lg-9">
-                    <h1 class="display-1 fw-bold" id="home-text">Dragon's Lair</h1>
-                    <p class="lead" id="home-desc"><em>The online portal where UA&P dragons can access the different student support services within the University</em></p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <a href="./login.html" class="btn btn-dark btn-lg px-4 me-md-2">Student Log in</a>
-                    </div>
-                </div>
-            </div>
+                <p><a href="#">Forgot password?</a></p>
+                <p><a href="#">No account yet?</a></p>
+                <button type="submit" class="btn btn-dark">Log-In</button>
+            </form>
         </div>
     </section>
+
+    <footer>
+        <p>Address</p>
+        <p><strong>Pearl Drive, Ortigas Center, Pasig City 1605, Philippines</strong></p>
+        <br>
+        <p>Contact</p>
+        <p><strong>Phone: (632) 8637-0912 to 26</strong></p>
+        <p><strong>E-mail: info@uap.asia</strong></p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./js/script.js"></script>
