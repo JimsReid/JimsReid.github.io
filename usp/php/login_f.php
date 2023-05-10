@@ -16,15 +16,15 @@ $username = validate($_POST['username']);
 $password = validate($_POST['password']);
 
 if(empty($username) && empty($password)){
-    header("Location: /usp/login.php?error=Username and Password is required.");
+    header("Location: /usp/login.php?error=Fields are required");
     exit();
 }
 else if(empty($username)){
-    header("Location: /usp/login.php?error=Username is required.");
+    header("Location: /usp/login.php?error=Username is required");
     exit();
 }
 else if(empty($password)){
-    header("Location: /usp/login.php?error=Password is required.");
+    header("Location: /usp/login.php?error=Password is required");
     exit();
 }
 
@@ -52,11 +52,11 @@ if(mysqli_num_rows($result) === 1){
     }
 
     else{
-        header("Location: /usp/login.php?error=Incorrent username or password");
+        header("Location: /usp/login.php?error=Incorrect username or password");
         exit();
     }
 }
 else{
-    header("Location: /usp/login.php?error=Incorrent username or password");
+    header("Location: /usp/login.php?error=Incorrect username or password");
     exit();
 }
