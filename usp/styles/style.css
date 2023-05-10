@@ -42,7 +42,6 @@ header.sticky{
     display: flex;
     margin-bottom: 0;
     margin-right: 40px;
-
 }
 
 .navlist li{
@@ -108,6 +107,13 @@ ul{
     line-height: .25;
 }
 
+#error-msg{
+    color: #d44737;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
 .form-div a{
     text-decoration: none;
     font-family: 'IBM Plex Mono', monospace;
@@ -158,6 +164,47 @@ footer p{
     margin-top: 20px;
     font-size: 1.25rem;
     width: 31.25rem;
+}
+
+#mid-items{
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.mid-a{
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px;
+    color: #333652;
+    
+}
+
+#mid-items:hover{
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.mid-txt-span{
+    font-weight: bold;
+}
+
+.mid-img-svg{
+    filter: invert(20%) sepia(33%) saturate(630%) hue-rotate(197deg) brightness(89%) contrast(92%);
+    width: 9.375rem;
+    padding-bottom: 25px;
+    padding-top: 15px;
+}
+
+.announcement-section{
+    background-color: #E9EAEC;
+    color: #333652;
+}
+
+#announcement-title{
+    color: #333652;
+}
+
+.announcement-desc{
+    font-size: 20px;
 }
 
 /*MOBILE VIEW*/

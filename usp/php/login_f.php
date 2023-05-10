@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once "./php/dbc.php";
+include_once __DIR__.'/../php/dbc.php';
 
 if (isset($_POST['username']) && isset($_POST['password'])){
     
@@ -15,13 +15,48 @@ if (isset($_POST['username']) && isset($_POST['password'])){
 $username = validate($_POST['username']);
 $password = validate($_POST['password']);
 
-if(empty($username)){
-    header("Location: login.php?erro=Username is required.");
+if(empty($username) && empty($password)){
+    header("Location: /usp/login.php?error=Username and Password is required.");
+    exit();
+}
+else if(empty($username)){
+    header("Location: /usp/login.php?error=Username is required.");
     exit();
 }
 else if(empty($password)){
-    header("Location: login.php?erro=Username is required.");
+    header("Location: /usp/login.php?error=Password is required.");
     exit();
 }
 
-$sql = "SELECT * FROM sserv_user WHERE";
+$password = md5($password);
+
+$loginSql = "SELECT * FROM sserv_user WHERE username = '$username' AND password = '$password'";
+
+$result = mysqli_query($conn, $loginSql);
+
+if(mysqli_num_rows($result) === 1){
+    $row = mysqli_fetch_assoc($result);
+    if($row['username'] === $username && $row['password'] === $password){
+        echo "Logged In!";
+        
+        $afterSuccesfulLogin = "SELECT * FROM sserv_profile WHERE email = '$username'";
+        $loginResult = mysqli_query($conn, $afterSuccesfulLogin);
+
+        $loginRow = mysqli_fetch_assoc($loginResult);
+        $_SESSION['ID'] = $loginRow['ID'];
+        $_SESSION['firstname'] = $loginRow['firstname'];
+        $_SESSION['lastName']= $loginRow['lastname'];
+
+        header("Location: /usp/index.php");
+        exit();
+    }
+
+    else{
+        header("Location: /usp/login.php?error=Incorrent username or password");
+        exit();
+    }
+}
+else{
+    header("Location: /usp/login.php?error=Incorrent username or password");
+    exit();
+}
