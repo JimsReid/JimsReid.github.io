@@ -1,7 +1,3 @@
-<?php
-    //include_once'./php/dbc.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,8 +36,8 @@
                     }
                 ?>
                 <div class="form-group">
-                    <input class="form-control-lg" type="text" placeholder="Username">
-                    <input class="form-control-lg" type="password" placeholder="Password">
+                    <input name="username" class="form-control-lg" type="text" placeholder="Username">
+                    <input name="password"class="form-control-lg" type="password" placeholder="Password">
                 </div>
                 <p><a href="#">Forgot password?</a></p>
                 <p><a href="#">No account yet?</a></p>
