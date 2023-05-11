@@ -24,18 +24,47 @@ if (isset($_SESSION['ID'])) {
     <body>
         <header>
             <a href="#"><img class="logo" src="./images/uap-logo.png"></a>
-            <ul class="navlist">
-                <li><a href="#">Directory</a></li>
-                <li><a href="./index.php">Home</a></li>
-            </ul>
-
-            <div class="bx bx-menu" id="menu-icon">
-
+            <div class="flex-shrink-0 dropdown">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="./profile-images/PFP-13164.jpg" alt="mdo" width="40" height="40" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu text-small shadow">
+                    <li><a class="dropdown-item" id="drop-item" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img src="./images/person-fill.svg"> Update Profile</a></li>
+                    <li><a class="dropdown-item" id="drop-item" href="#"><img src="./images/key-fill.svg"> Change Password</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" id="drop-item" href="./php/logout.php"><img src="./images/box-arrow-right.svg" alt=""> Log Out</a></li>
+                </ul>
             </div>
         </header>
 
+        <!--UPDATE MODAL-->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Update Profile</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="post">
+                            <div class="form-group">
+                                <input name="username" class="form-control-lg" type="text" placeholder="Username">
+                                <input name="password" class="form-control-lg" type="password" placeholder="Password">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-success">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <section class="user-page">
-            <div class="container col-xxl-8 px-4 py-5">
+            <div class="container col-xxl-8 px-4 pt-5">
                 <h1 class="display-5 fw-bold lh-1 mb-5 mt-5">Hello, <?php echo $fName; ?>!</h1>
                 <div class="row g-4 pb-2 px-2 row-cols-1 row-cols-lg-3" id="personal-data">
                     <div class="col-lg-12 col-md-12 col-sm-12">
@@ -75,8 +104,8 @@ if (isset($_SESSION['ID'])) {
                         <p class="user-label">Type:</p>
                     </div>
                     <div class="col-md-6 col-6 col-lg-3">
-                        <p class="user-detail">Detail</p>
-                        <p class="user-detail">Detail</p>
+                        <p class="user-detail"><?php echo $studID; ?></p>
+                        <p class="user-detail"><?php echo $program; ?></p>
                         <p class="user-detail">Detail</p>
                         <p class="user-detail">Detail</p>
                     </div>
@@ -86,13 +115,62 @@ if (isset($_SESSION['ID'])) {
                         <p class="user-label">Status</p>
                     </div>
                     <div class="col-md-6 col-6 col-lg-3">
-                        <p class="user-detail">Detail</p>
-                        <p class="user-detail">Detail</p>
-                        <p class="user-detail">Detail</p>
+                        <p class="user-detail"><?php echo $dateStart; ?></p>
+                        <p class="user-detail"><?php echo $yrLevel; ?></p>
+                        <p class="user-detail"><?php echo $studStat; ?></p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="stud-support">
+            <div class="container col-xxl-8 px-4 pb-5">
+                <h1 class="display-5 fw-bold lh-1 mb-5 mt-5">Student Support Services</h1>
+            </div>
+        </section>
+
+        <section class="sss-features">
+            <div class="container col-xxl-8 px-4 py-5">
+                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                    <div class="col-md-4 col-sm-8 col-lg-4" id="sss-items">
+                        <a href="#" class="sss-a">
+                            <div class="sss-img">
+                                <img src="./images/calculator.svg" class="img-svg">
+                            </div>
+                            <h3 class="fs-2">GWA Calculator</h3>
+                            <p>Want to keep track of your academic standing? This GWA calculator will help you give an idea of how well you're doing so far.</p>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-8 col-lg-4" id="sss-items">
+                        <a href="#" class="sss-a">
+                            <div class="sss-img">
+                                <img src="./images/list-check.svg" class="img-svg">
+                            </div>
+                            <h3 class="fs-2">Curriculum Checklist</h3>
+                            <p>Want to see how near you are to graduation? View your curriculum now.</p>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-8 col-lg-4" id="sss-items">
+                        <a href="#" class="sss-a">
+                            <div class="sss-img">
+                                <img src="./images/calendar-check.svg" class="img-svg">
+                            </div>
+                            <h3 class="fs-2">Academic Calendar</h3>
+                            <p>Check out the academic calendar to help you plan ahead.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Address</p>
+            <p><strong>Pearl Drive, Ortigas Center, Pasig City 1605, Philippines</strong></p>
+            <br>
+            <p>Contact</p>
+            <p><strong>Phone: (632) 8637-0912 to 26</strong></p>
+            <p><strong>E-mail: info@uap.asia</strong></p>
+        </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <script type="text/javascript" src="./js/script.js"></script>

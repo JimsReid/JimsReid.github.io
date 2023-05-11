@@ -49,18 +49,16 @@
                 <div class="col-md-6 col-sm-8 col-lg-6" id="mid-items">
                     <a href="#" class="mid-a">
                         <div class="mid-img">
-                            <img src="./images/calendar-check.svg" class="mid-img-svg">
+                            <img src="./images/calendar-check.svg" class="img-svg">
                         </div>
                         <p>Be updated with what's currently happening in UA&P by accessing our <span class="mid-txt-span">academic calendar</span>.</p>
                     </a>
                 </div>
                 <div class="col-md-6 col-sm-8 col-lg-6" id="mid-items">
                     <a href="#" class="mid-a">
-                        <div class="mid-img">
                             <div class="mid-img">
-                                <img src="./images/question-circle-fill.svg" class="mid-img-svg">
+                                <img src="./images/question-circle-fill.svg" class="img-svg">
                             </div>
-                        </div>
                         <p><span class="mid-txt-span">Confirmation</span> requirements? <span class="mid-txt-span">Enrollment</span> procedures? We've got them all for you, baby dragons!</p>
                     </a>
                 </div>

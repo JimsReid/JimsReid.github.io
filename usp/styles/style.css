@@ -176,7 +176,6 @@ footer p{
     font-family: 'IBM Plex Mono', monospace;
     font-size: 20px;
     color: #333652;
-    
 }
 
 #mid-items:hover{
@@ -187,7 +186,7 @@ footer p{
     font-weight: bold;
 }
 
-.mid-img-svg{
+.img-svg{
     filter: invert(20%) sepia(33%) saturate(630%) hue-rotate(197deg) brightness(89%) contrast(92%);
     width: 9.375rem;
     padding-bottom: 25px;
@@ -208,6 +207,11 @@ footer p{
 }
 
 /*DASHBOARD*/
+#drop-item{
+    color: #333652;
+    font-weight: bold;
+}
+
 .user-page{
     color: #333652;
 }
@@ -220,6 +224,29 @@ footer p{
     font-weight: bold;
 }
 
+.stud-support{
+    color: #333652;
+}
+
+#sss-items{
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.sss-a{
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px;
+    color: #333652;
+}
+
+#sss-items:hover{
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.fs-2{
+    font-weight: bold;
+}
 
 /*MOBILE VIEW*/
 @media(max-width: 850px){
