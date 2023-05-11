@@ -41,7 +41,7 @@ if (isset($_SESSION['ID'])) {
 
         <!--UPDATE MODAL-->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="staticBackdropLabel">Update Profile</h1>
@@ -49,15 +49,27 @@ if (isset($_SESSION['ID'])) {
                     </div>
                     <div class="modal-body">
                         <form action="post">
-                            <div class="form-group">
-                                <input name="username" class="form-control-lg" type="text" placeholder="Username">
-                                <input name="password" class="form-control-lg" type="password" placeholder="Password">
+                            <!--WORK IN PROGRESS-->
+                            <div class="form-row">
+                                <div class="form-group col-4">
+                                    <label for="firstName">First Name:</label>
+                                    <input type="text" class="form-control" id="firstName">
+                                </div>
+                                <div class="form-group col-4">
+                                    <label for="middleName">Middle Name:</label>
+                                    <input type="text" class="form-control" id="middleName">
+                                </div>
                             </div>
+
+                            <label for="middleName">Middle Name:</label>
+                            <input type="text" class="form-control" id="middleName">
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" class="form-control" id="lastName">
+                            <label for="nickName">Nickname:</label>
+                            <input type="text" class="form-control" id="nickName">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-success">Save</button>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-success">Save</button>
                     </div>
                 </div>
             </div>
