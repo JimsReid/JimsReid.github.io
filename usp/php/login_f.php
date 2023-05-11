@@ -47,7 +47,7 @@ if(mysqli_num_rows($result) === 1){
         $_SESSION['firstname'] = $loginRow['firstname'];
         $_SESSION['lastName']= $loginRow['lastname'];
 
-        header("Location: /usp/index.php");
+        header("Location: /usp/dashboard.php");
         exit();
     }
 
