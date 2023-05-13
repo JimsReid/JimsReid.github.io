@@ -41,32 +41,55 @@ if (isset($_SESSION['ID'])) {
 
         <!--UPDATE MODAL-->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="staticBackdropLabel">Update Profile</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form action="post">
-                            <!--WORK IN PROGRESS-->
-                            <div class="form-row">
-                                <div class="form-group col-4">
+                        <form action="./php/login_f.php" method="post">
+                            <h5 class="fw-bold">PERSONAL DATA</h5>
+                            <div class="row">
+                                <div class="col-md-6 col-lg-3">
                                     <label for="firstName">First Name:</label>
                                     <input type="text" class="form-control" id="firstName">
                                 </div>
-                                <div class="form-group col-4">
+                                <div class="col-md-6 col-lg-3">
                                     <label for="middleName">Middle Name:</label>
                                     <input type="text" class="form-control" id="middleName">
                                 </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <label for="lastName">Last Name:</label>
+                                    <input type="text" class="form-control" id="lastName">
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <label for="nickName">Nickname:</label>
+                                    <input type="text" class="form-control" id="nickName">
+                                </div>
                             </div>
-
-                            <label for="middleName">Middle Name:</label>
-                            <input type="text" class="form-control" id="middleName">
-                            <label for="lastName">Last Name:</label>
-                            <input type="text" class="form-control" id="lastName">
-                            <label for="nickName">Nickname:</label>
-                            <input type="text" class="form-control" id="nickName">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-3">
+                                    <label for="gender">Gender:</label>
+                                    <select class="form-select" id="gender">
+                                        <option selected>Choose gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <label for="birthDate">Birthdate:</label>
+                                    <input type="date" class="form-control" id="birthDate">
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <label for="birthPlace">Birthplace:</label>
+                                    <input type="text" class="form-control" id="birthPlace">
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <label for="citizenship">Citizenship:</label>
+                                    <input type="text" class="form-control" id="citizenship">
+                                </div>
+                            </div>                            
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
                             <button type="button" class="btn btn-success">Save</button>
                         </form>
