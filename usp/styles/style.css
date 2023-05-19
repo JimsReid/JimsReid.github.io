@@ -1,0 +1,299 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.logo{
+    width: 250px;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E9EAEC;
+    padding: 5px 5px;
+    border-bottom: 1px solid transparent;
+    z-index: 1000;
+    transition: all .45s ease;
+}
+
+header.sticky{
+    background: #fff;
+    border-bottom: 1px solid #333652;
+    padding: 12px 15%;
+}
+
+#menu-icon{
+    font-size: 35px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    margin-left: 25px;
+    display: none;
+}
+
+.navlist{
+    display: flex;
+    margin-bottom: 0;
+    margin-right: 40px;
+}
+
+.navlist li{
+    margin-left: 20px;
+}
+
+.navlist a{
+    color: #333652;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all .45s ease;
+}
+
+.navlist a:hover{
+    color: #FAD02C;
+}
+
+.navlist a.active{
+    color: #FAD02C;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0; 
+}
+
+.login{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.form-div{
+    width: 300px;
+    align-items: center;
+    text-align: center;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-control-lg{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid gray;
+}
+
+.form-div h2{
+    font-weight: bold;
+    text-align: left;
+    color: #333652;
+}
+
+.form-div p{
+    line-height: .25;
+}
+
+#error-msg{
+    color: #d44737;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.form-div a{
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #333652;
+}
+
+.btn{
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #333652;
+}
+
+footer{
+    background: #E9EAEC;
+    text-align: center;
+    padding: 15px;
+    z-index: 1000;
+}
+
+footer p{
+    margin: 0;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+/*HOME PAGE*/
+
+.home{
+    background-image: url(../images/home_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+#home-text{
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+#home-desc{
+    background-color: rgba(255, 255, 255, .5);
+    color: #333652;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 1.25rem;
+    width: 31.25rem;
+}
+
+#mid-items{
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.mid-a{
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px;
+    color: #333652;
+}
+
+#mid-items:hover{
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.mid-txt-span{
+    font-weight: bold;
+}
+
+.img-svg{
+    filter: invert(20%) sepia(33%) saturate(630%) hue-rotate(197deg) brightness(89%) contrast(92%);
+    width: 9.375rem;
+    padding-bottom: 25px;
+    padding-top: 15px;
+}
+
+.announcement-section{
+    background-color: #E9EAEC;
+    color: #333652;
+}
+
+#announcement-title{
+    color: #333652;
+}
+
+.announcement-desc{
+    font-size: 20px;
+}
+
+/*DASHBOARD*/
+#drop-item{
+    color: #333652;
+    font-weight: bold;
+}
+
+.user-page{
+    color: #333652;
+}
+
+#personal-data{
+    background-color: #E9EAEC;
+}
+
+.user-detail{
+    font-weight: bold;
+}
+
+.stud-support{
+    color: #333652;
+}
+
+#sss-items{
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.sss-a{
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px;
+    color: #333652;
+}
+
+#sss-items:hover{
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.fs-2{
+    font-weight: bold;
+}
+
+/*MOBILE VIEW*/
+@media(max-width: 850px){
+    #menu-icon{
+        display: block;
+    }
+    
+    .navlist{
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: #333652;
+        text-align: left;
+        transition: all .45s ease;
+    }
+
+    .navlist a{
+        display: block;
+        margin: 17px;
+        font-size: 20px;
+        transition: all .45s ease;
+        color: #fff;
+    }
+
+    .navlist a:hover{
+        color: #FAD02C;
+    }
+
+    .navlist a.active{
+        color: #FAD02C;
+    }
+
+    .navlist.open{
+        top: 100%;
+    }
+}
+
+@media(max-width: 500px){
+    #home-desc{
+        background-color: rgba(255, 255, 255, .5);
+        color: #333652;
+        padding: 10px;
+        margin-top: 20px;
+        font-size: 1.25rem;
+        width: 12.5rem;
+    }
+}
