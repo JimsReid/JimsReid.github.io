@@ -48,50 +48,55 @@ if (isset($_SESSION['ID'])) {
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form action="./php/login_f.php" method="post">
+                        <form action="./php/profile-update_f.php" method="post" class="was-validated">
                             <h5 class="fw-bold">PERSONAL DATA</h5>
                             <div class="row">
                                 <div class="col-md-6 col-lg-3">
                                     <label for="firstName">First Name:</label>
-                                    <input type="text" class="form-control" id="firstName">
+                                    <input name="firstName" type="text" class="form-control" id="firstName" value="<?php echo $fName; ?>" required>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
                                 </div>
                                 <div class="col-md-6 col-lg-3">
                                     <label for="middleName">Middle Name:</label>
-                                    <input type="text" class="form-control" id="middleName">
+                                    <input name="middleName" type="text" class="form-control" id="middleName" value="<?php echo $mName; ?>" required>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
                                 </div>
                                 <div class="col-md-6 col-lg-3">
                                     <label for="lastName">Last Name:</label>
-                                    <input type="text" class="form-control" id="lastName">
+                                    <input name="lastName" type="text" class="form-control" id="lastName" value="<?php echo $lname; ?>"required>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
                                 </div>
                                 <div class="col-md-6 col-lg-3">
                                     <label for="nickName">Nickname:</label>
-                                    <input type="text" class="form-control" id="nickName">
+                                    <input name="nickName" type="text" class="form-control" id="nickName" value="---">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6 col-lg-3">
                                     <label for="gender">Gender:</label>
-                                    <select class="form-select" id="gender">
-                                        <option selected>Choose gender</option>
+                                    <select name="gender" class="form-select" id="gender" required>
+                                        <option selected></option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                     </select>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
                                 </div>
                                 <div class="col-md-6 col-lg-3">
                                     <label for="birthDate">Birthdate:</label>
-                                    <input type="date" class="form-control" id="birthDate">
+                                    <input name="birthDate" type="date" class="form-control" id="birthDate" required>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
                                 </div>
                                 <div class="col-md-6 col-lg-3">
                                     <label for="birthPlace">Birthplace:</label>
-                                    <input type="text" class="form-control" id="birthPlace">
+                                    <input name="birthPlace" type="text" class="form-control" id="birthPlace" value="---">
                                 </div>
                                 <div class="col-md-6 col-lg-3">
                                     <label for="citizenship">Citizenship:</label>
-                                    <input type="text" class="form-control" id="citizenship">
+                                    <input name="citizenship" type="text" class="form-control" id="citizenship" value="---">
                                 </div>
                             </div>                            
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-success">Save</button>
+                            <button type="submit" class="btn btn-success">Save</button>
                         </form>
                     </div>
                 </div>
@@ -116,7 +121,7 @@ if (isset($_SESSION['ID'])) {
                         <p class="user-detail"><?php echo $lname; ?></p>
                         <p class="user-detail"><?php echo $fName; ?></p>
                         <p class="user-detail"><?php echo $mName; ?></p>
-                        <p class="user-detail">Detail</p>
+                        <p class="user-detail">---</p>
                         <p class="user-detail"><?php echo $sex; ?></p>
                     </div>
                     <div class="col-md-6 col-6 col-lg-3">
@@ -126,8 +131,8 @@ if (isset($_SESSION['ID'])) {
                     </div>
                     <div class="col-md-6 col-6 col-lg-3">
                         <p class="user-detail"><?php echo $birthdate; ?></p>
-                        <p class="user-detail">Detail</p>
-                        <p class="user-detail">Detail</p>
+                        <p class="user-detail">---</p>
+                        <p class="user-detail">---</p>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <h4 class="display-8">ACADEMIC STATUS</h4>
@@ -141,8 +146,8 @@ if (isset($_SESSION['ID'])) {
                     <div class="col-md-6 col-6 col-lg-3">
                         <p class="user-detail"><?php echo $studID; ?></p>
                         <p class="user-detail"><?php echo $program; ?></p>
-                        <p class="user-detail">Detail</p>
-                        <p class="user-detail">Detail</p>
+                        <p class="user-detail">---</p>
+                        <p class="user-detail">---</p>
                     </div>
                     <div class="col-md-6 col-6 col-lg-3">
                         <p class="user-label">Entry Year:</p>

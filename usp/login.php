@@ -29,10 +29,10 @@
     <section class="login" id="login">
         <div class="col-lg-12 form-div">
             <h2>Hi, Dragon!</h2>
-            <form action="./php/profile-update_f.php" method="POST">
+            <form action="./php/login_f.php" method="POST">
                 <div class="form-group">
                     <input name="username" class="form-control-lg" type="text" placeholder="Username">
-                    <input name="password"class="form-control-lg" type="password" placeholder="Password">
+                    <input name="password" class="form-control-lg" type="password" placeholder="Password">
                 </div>
                 <?php
                     if(isset($_GET['error'])){
