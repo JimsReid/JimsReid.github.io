@@ -15,7 +15,7 @@
     <header>
         <a href="#" class="logo">KALLIOPE</a>
         <ul class="navlist">
-            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#collection">Collections</a></li>
             <li><a href="#spotlight">Spotlight</a></li>
@@ -29,10 +29,10 @@
 
     <section class="home" id="home">
         <div class="px-4 py-5 text-center" id="home-texts">
-            <h1 class="display-5 fw-bold text-body-emphasis">Wings & Dreams</h1>
+            <h1 class="display-5 fw-bold" id="home-lead">Wings & Dreams</h1>
             <div class="col-lg-6 mx-auto">
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3 mt-2">Shop Now</button>
+                    <a href="#spotlight"><button type="button" class="btn btn-primary btn-lg px-4 gap-3 mt-2" id="btn-home">SHOP NOW</button></a>
                 </div>
             </div>
         </div>
@@ -42,11 +42,11 @@
         <div class="container col-xl-10 col-xxl-8 px-4 py-5">
             <div class="row align-items-center g-lg-5 py-5">
                 <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="display-2 fw-bold lh-1 text-body-emphasis mb-3">A whimsical experience</h1>
+                    <h1 class="display-1 fw-bold lh-1 my-5" id="about-lead">A whimsical experience</h1>
                 </div>
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="display-4 fw-medium lh-1 text-body-emphasis mb-3">Kalliope offers various style of wings.
-                    </h1>
+                <div class="col-lg-6 text-center text-lg-start" id="about-desc">
+                    <h2 class="display-6 fw-bold lh-1 my-3">Kalliope offers various style of wings.
+                    </h2>
                     <p class="col-lg-10 fs-4">Shop for whatever you feel like wearing and get it in high quality!</p>
                 </div>
             </div>
@@ -60,12 +60,12 @@
                         id="collection-img">
                 </div>
                 <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 mt-5 text-center">New Collection <br>◇
+                    <h1 class="display-5 fw-bold lh-1 mb-3 mt-5 text-center">New Collection <br>◇
                         Winxical</h1>
-                    <p class="lead" id="collection-desc">Consists of 6 different variants. <br> Bloom, Stella, Aisha,
+                    <p class="lead" id="collection-desc">Consists of six different variants. <br> Bloom, Stella, Aisha,
                         Flora, Musa and Tecna.</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Shop Now</button>
+                        <a href="#spotlight"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2" id="btn-collection">SHOP NOW</button></a>
                     </div>
                 </div>
             </div>
@@ -105,7 +105,7 @@
 
     <section class="contact" id="contact">
         <div class="container col-xl-10 col-xxl-8 col-md-12 px-4 py-5">
-            <div class="px-4 py-5 text-start" id="contact-details">
+            <div class="text-start" id="contact-details">
                 <h2>KALLIOPE</h2>
                 <ul class="contact-list">
                     <li><a href="#">Instagram</a></li>
