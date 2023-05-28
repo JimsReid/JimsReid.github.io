@@ -7,10 +7,15 @@ body{
     background-color: black;
 }
 
+/*HOME*/
 .home{
     height: 100vh;
     width: 100%;
     color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #home-img{
@@ -18,11 +23,11 @@ body{
     margin: auto;
 }
 
-.lead{
+.home-lead{
     border: solid white 1px;
     border-radius: 25px;
     width: fit-content;
-    padding: 5px 10px;
+    padding: 10px 15px;
 }
 
 .home-arrow{
@@ -35,4 +40,28 @@ body{
 #home-bottom-text{
     display: flex;
     justify-content: end;
+}
+
+/*ABOUT*/
+.about{
+    height: 100vh;
+    width: 100%;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about-img{
+    border-radius: 25% 70% 25% 70%;
+    margin: auto;
+}
+
+.about-hr{
+    height: 2px;
+    color: white;
+    background-color: white;
+    border-radius: 2px;
+    margin-top: 20px;
 }
