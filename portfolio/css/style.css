@@ -1,3 +1,8 @@
+@font-face {
+    font-family: the-seasons-font;
+    src: url(../fonts/The-Seasons-Reg.otf);
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -16,6 +21,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#home-title{
+    font-family: the-seasons-font;
+    font-size: 4.688rem;
+    letter-spacing: 0.156rem;
 }
 
 #home-img{
@@ -51,6 +62,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#about-text{
+    font-family: the-seasons-font;
+    font-size: 4.688rem;
+    letter-spacing: 0.156rem;
 }
 
 #about-img{
