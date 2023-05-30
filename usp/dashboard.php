@@ -63,7 +63,7 @@ if (isset($_SESSION['ID'])) {
                                 </div>
                                 <div class="col-md-6 col-lg-3">
                                     <label for="lastName">Last Name:</label>
-                                    <input name="lastName" type="text" class="form-control" id="lastName" value="<?php echo $lname; ?>"required>
+                                    <input name="lastName" type="text" class="form-control" id="lastName" value="<?php echo $lname; ?>" required>
                                     <div class="invalid-feedback">Please fill out this field.</div>
                                 </div>
                                 <div class="col-md-6 col-lg-3">
@@ -94,7 +94,7 @@ if (isset($_SESSION['ID'])) {
                                     <label for="citizenship">Citizenship:</label>
                                     <input name="citizenship" type="text" class="form-control" id="citizenship" value="---">
                                 </div>
-                            </div>                            
+                            </div>
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
                             <button type="submit" class="btn btn-success">Save</button>
                         </form>
@@ -164,8 +164,59 @@ if (isset($_SESSION['ID'])) {
         </section>
 
         <section class="stud-support">
-            <div class="container col-xxl-8 px-4 pb-5">
-                <h1 class="display-5 fw-bold lh-1 mb-5 mt-5">Student Support Services</h1>
+            <div class="container col-xxl-8 px-4 pt-5">
+                <h2 class="pb-2 border-bottom">Student Support Services</h2>
+                <div class="row g-4 py-5 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                    <div class="feature col">
+                        <img src="./images/adm.png" class="unit-img">
+                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                        <a href="#" class="icon-link">
+                            Click Here
+                        </a>
+                    </div>
+                    <div class="feature col">
+                        <img src="./images/csa.png" class="unit-img">
+                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                        <a href="#" class="icon-link">
+                            Click Here
+                        </a>
+                    </div>
+                    <div class="feature col">
+                        <img src="./images/ctl.png" class="unit-img">
+                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                        <a href="#" class="icon-link">
+                            Click Here
+                        </a>
+                    </div>
+                    <div class="feature col">
+                        <img src="./images/ict.png" class="unit-img">
+                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                        <a href="#" class="icon-link">
+                            Click Here
+                        </a>
+                    </div>
+                    <div class="feature col">
+                        <img src="./images/lib.png" class="unit-img">
+                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                        <a href="#" class="icon-link">
+                            Click Here
+                        </a>
+                    </div>
+                    <div class="feature col">
+                        <img src="./images/pia.png" class="unit-img">
+                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                        <a href="#" class="icon-link">
+                            Click Here
+                        </a>
+                    </div>
+                    <div class="feature col">
+                        <img src="./images/reg.png" class="unit-img">
+                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                        <a href="#" class="icon-link">
+                            Click Here
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 

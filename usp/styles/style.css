@@ -228,6 +228,11 @@ footer p{
     color: #333652;
 }
 
+.unit-img{
+    max-width: 100%;
+}
+
+
 #sss-items{
     text-align: center;
     transition: box-shadow 0.3s ease-in-out;
