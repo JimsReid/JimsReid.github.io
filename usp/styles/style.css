@@ -228,6 +228,11 @@ footer p{
     color: #333652;
 }
 
+#collapse-btn{
+    width: 100%;
+    text-align: start;
+}
+
 .unit-img{
     max-width: 100%;
 }

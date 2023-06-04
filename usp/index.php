@@ -47,7 +47,7 @@
         <div class="container col-xxl-8 px-4 py-5">
             <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
                 <div class="col-md-6 col-sm-8 col-lg-6" id="mid-items">
-                    <a href="#" class="mid-a">
+                    <a href="https://drive.google.com/file/d/1wdp8g6alCl4j_0Fg6pdpHLQjc0Hue-5n/view" class="mid-a" target="_blank">
                         <div class="mid-img">
                             <img src="./images/calendar-check.svg" class="img-svg">
                         </div>
@@ -55,7 +55,7 @@
                     </a>
                 </div>
                 <div class="col-md-6 col-sm-8 col-lg-6" id="mid-items">
-                    <a href="#" class="mid-a">
+                    <a href="https://prod-student.uap.asia/login" class="mid-a" target="_blank">
                             <div class="mid-img">
                                 <img src="./images/question-circle-fill.svg" class="img-svg">
                             </div>

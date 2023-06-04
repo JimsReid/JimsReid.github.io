@@ -43,6 +43,7 @@ if(mysqli_num_rows($result) === 1){
         $loginResult = mysqli_query($conn, $afterSuccesfulLogin);
 
         $loginRow = mysqli_fetch_assoc($loginResult);
+        $_SESSION['username'] = $username;
         $_SESSION['ID'] = $loginRow['ID'];
         $_SESSION['firstname'] = $loginRow['firstname'];
         $_SESSION['lastName']= $loginRow['lastname'];

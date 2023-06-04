@@ -3,7 +3,7 @@
 
     $ID = $_SESSION['ID'];
 
-    $personalSql = "SELECT firstname, lastname, middlename, email, sex, birthdate FROM sserv_profile WHERE ID = '$ID'";
+    $personalSql = "SELECT firstname, lastname, middlename, email, sex, birthdate, birthplace, citizenship FROM sserv_profile WHERE ID = '$ID'";
     $pResult = mysqli_query($conn, $personalSql);
 
     if(mysqli_num_rows($pResult) === 1){
@@ -13,7 +13,9 @@
         $mName = $pRow['middlename'];
         $email = $pRow['email'];
         $sex = $pRow['sex'];
-        $birthdate = date_format(date_create($pRow['birthdate']),"F j, Y"); 
+        $birthdate = date_format(date_create($pRow['birthdate']),"F j, Y");
+        $birthplace = $pRow['birthplace'];
+        $citizenship = $pRow['citizenship'];
     }
 
     $academicSql = "SELECT studID, g3, datestart, yearlevel, studentstatus FROM sserv_course WHERE profileID = '$ID'";

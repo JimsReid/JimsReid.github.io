@@ -18,3 +18,20 @@ window.onscroll = () => {
     navlist.classList.remove('open');
 };
 
+//CONFIRM PASSWORD
+function check() {
+    if (document.getElementById('newPass').value == document.getElementById('conNewPass').value) {
+        document.getElementById('message').style.color = 'green';
+        document.getElementById('message').innerHTML = 'Password matched';
+        document.getElementById('confirmBtn').disabled = false;
+    } 
+    else {
+        document.getElementById('message').style.color = 'red';
+        document.getElementById('message').innerHTML = 'Password does not match';
+        document.getElementById('confirmBtn').disabled = true;
+    }
+}
+
+function passChanged(){
+    document.getElementById('message').innerHTML = 'Password succesfully changed';
+}
