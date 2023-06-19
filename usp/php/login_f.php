@@ -58,6 +58,6 @@ if(mysqli_num_rows($result) === 1){
     }
 }
 else{
-    header("Location: /usp/login.php?error=Incorrect username or password");
+    header("Location: /usp/login.php?error=Couldn't Connect");
     exit();
 }

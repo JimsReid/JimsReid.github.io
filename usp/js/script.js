@@ -32,6 +32,15 @@ function check() {
     }
 }
 
-function passChanged(){
-    document.getElementById('message').innerHTML = 'Password succesfully changed';
-}
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the pop-up element
+    var popup = document.querySelector('.popup');
+    
+    // Check if the pop-up exists
+    if (popup) {
+        // Set a timeout to remove the pop-up after 2 seconds
+        setTimeout(function() {
+            popup.remove();
+        }, 5000); // 5 seconds = 5000 milliseconds
+    }
+});

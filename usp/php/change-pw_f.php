@@ -32,8 +32,16 @@ if(mysqli_num_rows($result) === 1){
         $updatePassSql = "UPDATE sserv_user SET password = '$conNewPass' WHERE username = '$username'";
         mysqli_query($conn, $updatePassSql);
 
-        echo '<script type="text/javascript" src="./js/script.js">',
-        'passChanged();',
-        '</script>';
+        $_SESSION['password_changed'] = true;
+
+        header("Location: /usp/dashboard.php");
+        exit();
     }
+}
+//fix here
+else{
+    $_SESSION['password_changed'] = "Incorrect";
+
+    header("Location: /usp/dashboard.php");
+    exit();
 }

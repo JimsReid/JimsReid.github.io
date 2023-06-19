@@ -139,6 +139,17 @@ if (isset($_SESSION['ID'])) {
 
         <section class="user-page">
             <div class="container col-xxl-8 px-4 py-5">
+            <?php
+                if (isset($_SESSION['password_changed'])) {
+                    echo '<div class="popup"><div class="pw-message">Password changed successfully!</div></div>';
+                    unset($_SESSION['password_changed']);
+                }
+                //fix here
+                else if ($_SESSION['password_changed'] == "Incorrect") {
+                    echo '<div class="popup"><div class="pw-message">Password is incorrect!</div></div>';
+                    unset($_SESSION['password_changed']);
+                }
+            ?>
                 <h1 class="display-5 fw-bold lh-1 mb-5 mt-5">Hello, <?php echo $fName; ?>!</h1>
                 <div class="row g-4 pb-2 px-2 row-cols-1 row-cols-lg-3" id="personal-data">
                     <div class="col-lg-12 col-md-12 col-sm-12">

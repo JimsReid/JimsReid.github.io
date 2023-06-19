@@ -87,8 +87,70 @@
 
     <section class="units">
         <div class="container col-xxl-8 px-4 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <h1 class="display-3 fw-bold lh-1 mb-3">Get to know us!</h1>
+            <h1 class="display-3 fw-bold lh-1 mb-3">Get to know us!</h1>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h4>Student Support Services</h4>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="row g-4 py-5 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                                <div class="feature col">
+                                    <img src="./images/adm.png" class="unit-img">
+                                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                                    <a href="https://prod-student.uap.asia/login" class="icon-link" target="_blank">
+                                        Click Here
+                                    </a>
+                                </div>
+                                <div class="feature col">
+                                    <img src="./images/csa.png" class="unit-img">
+                                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                                    <a href="https://csa.uap.asia/" class="icon-link" target="_blank">
+                                        Click Here
+                                    </a>
+                                </div>
+                                <div class="feature col">
+                                    <img src="./images/ctl.png" class="unit-img">
+                                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                                    <a href="https://ctl.uap.asia/" class="icon-link" target="_blank">
+                                        Click Here
+                                    </a>
+                                </div>
+                                <div class="feature col">
+                                    <img src="./images/ict.png" class="unit-img">
+                                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                                    <a href="https://ict.uap.asia/" class="icon-link" target="_blank">
+                                        Click Here
+                                    </a>
+                                </div>
+                                <div class="feature col">
+                                    <img src="./images/lib.png" class="unit-img">
+                                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                                    <a href="https://library.uap.asia/" class="icon-link" target="_blank">
+                                        Click Here
+                                    </a>
+                                </div>
+                                <div class="feature col">
+                                    <img src="./images/pia.png" class="unit-img">
+                                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                                    <a href="https://uap.asia/international" class="icon-link" target="_blank">
+                                        Click Here
+                                    </a>
+                                </div>
+                                <div class="feature col">
+                                    <img src="./images/reg.png" class="unit-img">
+                                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                                    <a href="https://registrar.uap.asia/" class="icon-link" target="_blank">
+                                        Click Here
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
